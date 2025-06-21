@@ -1,7 +1,7 @@
 "use client";
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { ArrowDownLeft, ArrowUpRight, DollarSign } from "lucide-react";
+import { ArrowDownLeft, ArrowUpRight, IndianRupee } from "lucide-react";
 
 interface StatsCardsProps {
   data: {
@@ -21,7 +21,7 @@ export function StatsCards({ data }: StatsCardsProps) {
         </CardHeader>
         <CardContent>
           <div className="text-2xl font-bold">
-            ${data.income.toLocaleString()}
+            ₹{data.income.toLocaleString("en-IN")}
           </div>
           <p className="text-xs text-muted-foreground">+12.5% from last month</p>
         </CardContent>
@@ -33,7 +33,7 @@ export function StatsCards({ data }: StatsCardsProps) {
         </CardHeader>
         <CardContent>
           <div className="text-2xl font-bold">
-            ${data.expenses.toLocaleString()}
+            ₹{data.expenses.toLocaleString("en-IN")}
           </div>
           <p className="text-xs text-muted-foreground">+5.2% from last month</p>
         </CardContent>
@@ -41,11 +41,11 @@ export function StatsCards({ data }: StatsCardsProps) {
       <Card>
         <CardHeader className="flex flex-row items-center justify-between pb-2 space-y-0">
           <CardTitle className="text-sm font-medium">Net Balance</CardTitle>
-          <DollarSign className="w-4 h-4 text-muted-foreground" />
+          <IndianRupee className="w-4 h-4 text-muted-foreground" />
         </CardHeader>
         <CardContent>
           <div className="text-2xl font-bold">
-            ${data.netBalance.toLocaleString()}
+            ₹{data.netBalance.toLocaleString("en-IN")}
           </div>
           <p className="text-xs text-muted-foreground">Your current balance</p>
         </CardContent>

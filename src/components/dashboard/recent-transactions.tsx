@@ -103,7 +103,7 @@ export function RecentTransactions({ data }: RecentTransactionsProps) {
                   </TableCell>
                   <TableCell>{transaction.date}</TableCell>
                   <TableCell className="text-right">
-                    -${transaction.amount.toFixed(2)}
+                    -₹{transaction.amount.toLocaleString('en-IN', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
                   </TableCell>
                 </TableRow>
               );
